@@ -4,7 +4,7 @@ const HeaderStyle = styled.header`
   display: flex;
   lign-items:center;
   justify-content:space-around;
-  background: #aaa;
+  background: #f5f5dc;
 min-height:10vh;
 
 `;
