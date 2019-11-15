@@ -1,6 +1,7 @@
 import React from 'react'
 
 import styled,{keyframes} from 'styled-components';
+import {TextStyle} from '../../styles/TextStyle'
 // Create the keyframes
 const grow = keyframes`
   from {
@@ -17,10 +18,11 @@ const EmojiStyle = styled.div`
   padding: 2rem 1rem;
   font-size: 1.2rem;
 `;
+
 export default function Calculating() {
     return (
-        <div>
+        <TextStyle>
             <p>Thinking <EmojiStyle>&#129300;</EmojiStyle> </p>
-        </div>
+        </TextStyle>
     )
 }

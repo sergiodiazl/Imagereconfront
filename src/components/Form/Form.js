@@ -4,42 +4,12 @@ import Error from '../Error/Error';
 import Calculating from '../Calculating/Calculating';
 import Survey from '../Survey/Survey';
 import SurveyGraph from '..//SurveyGraph/SurveyGraph'
+import {BoxStyle}from '../../styles/BoxStyle'
 import axios from 'axios';
 import styled from 'styled-components';
-const FormStyle = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-family: 'Poppins', sans-serif;
-  min-height:50vh;
-  min-width:50vw;
-  align-items: center;
-  align-self:center;
-  border-radius:2%;
-  padding:5%;
-  justify-content:space-between;
-  background:#fff;
-`;
+import {ButtonStyle  as GuessButton} from '../../styles/ButtonStyle'
 
-const GuessButton = styled.button`
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-  color:#fff;
-  background-color: palevioletred;
-  font-size: inherit;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  outline: none;
-  padding: 1rem 50px;
-  border-radius: 5px;
-  border: 2px solid palevioletred;
-  margin: 0 1em;
-  padding: 0.25em 1em;
-  transition: 0.5s all ease-out;
-  &:hover {
-    background-color: #fff;
-    color:palevioletred;
-  }
-`;
+
 const ImageInput = styled.input.attrs({
     type: 'file',
 })`
@@ -127,7 +97,7 @@ export default class Form extends Component {
         const { selectedFile } = this.state
         if (selectedFile != null) {
             const formData = new FormData()
-            this.setState({ loadingResults: true, resultError: false })
+            this.setState({ loadingResults: true, resultError: false ,canVote:false})
             formData.append(
                 'image',
                 selectedFile,
@@ -181,7 +151,7 @@ export default class Form extends Component {
         }
 
         return (
-            <FormStyle>
+            <BoxStyle>
                 <h1>I will guess what your image is</h1>
                 <ImageInput type="file" id="imageInput" onChange={this.fileChangedHandler} />
                 <label htmlFor="imageInput" >choose an image</label>
@@ -195,7 +165,7 @@ export default class Form extends Component {
                 {imageError ? <Error message='error loading image ,try again' /> : null}
                 {resultError ? <Error message='api error ' /> : null}
                 {typeError ? <Error message='invalid file type' /> : null}
-            </FormStyle>
+            </BoxStyle>
         );
     }
 }

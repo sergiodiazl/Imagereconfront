@@ -1,9 +1,9 @@
 import React from 'react'
-
+import {BoxStyle}from '../../styles/BoxStyle'
 export default function About() {
     return (
-        <div>
+        <BoxStyle>
             alalala
-        </div>
+        </BoxStyle>
     )
 }

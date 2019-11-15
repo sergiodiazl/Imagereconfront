@@ -22,7 +22,7 @@ padding: 0.25em 1em;
 transition: 0.5s all ease-out;
 &:hover {
   background-color: #fff;
-  
+  color: palevioletred;
 }
 `;
 export default function SurveyGraph(props) {
