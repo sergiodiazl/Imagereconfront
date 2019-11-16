@@ -43,6 +43,7 @@ border: 2px solid Red ;
 export const BackButton=styled(ButtonStyle)`
 
 background-color: #0080ff; ;
+color:#fff;
 border: 2px solid #0080ff;
 &:hover {
   background-color: #fff;

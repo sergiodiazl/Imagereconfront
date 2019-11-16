@@ -22,7 +22,7 @@ const EmojiStyle = styled.div`
 export default function Calculating() {
     return (
         <TextStyle>
-            <p>Thinking <EmojiStyle>&#129300;</EmojiStyle> </p>
+            <p>Thinking <EmojiStyle><span role='img'aria-label='thinking emoji'>&#129300;</span></EmojiStyle> </p>
         </TextStyle>
     )
 }

@@ -9,7 +9,7 @@ const fadeIn=keyframes`
 `;
 const ItemStyle = styled.div`
   display: block;
-  border-radius:3%;
+  border-radius:5px;
   margin:3% 0%;
   color:#fff;
   background:#0080ff;

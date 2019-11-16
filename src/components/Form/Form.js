@@ -8,6 +8,7 @@ import {BoxStyle}from '../../styles/BoxStyle'
 import axios from 'axios';
 import styled from 'styled-components';
 import {ButtonStyle  as GuessButton} from '../../styles/ButtonStyle'
+import { TextStyle } from '../../styles/TextStyle';
 
 
 const ImageInput = styled.input.attrs({
@@ -145,7 +146,7 @@ export default class Form extends Component {
     }
     render() {
         const { loadingImage, loadingResults, imageError, resultError, results, typeError,totalPredictions,correctPredictions,canVote } = this.state
-        let imagePreview = (<div className="previewText image-container">Please select an Image for Preview</div>);
+        let imagePreview = (<TextStyle>Please select an Image for Preview</TextStyle>);
         if (this.state.imagePreviewUrl) {
             imagePreview = (<div className="image-container" ><img src={this.state.imagePreviewUrl} alt="icon" width="200" /> </div>);
         }
@@ -161,7 +162,7 @@ export default class Form extends Component {
                 {loadingResults ? <Calculating /> : null}
                 {results.length > 0 ? <Results predictions={results} /> : null}
                 {canVote?<Survey voteYes={this.voteYes} voteNo={this.voteNo}/>:null}
-                <SurveyGraph total={totalPredictions} correct={correctPredictions} reset={this.resetVotes}/>
+                {totalPredictions>0?<SurveyGraph total={totalPredictions} correct={correctPredictions} reset={this.resetVotes}/>:null}
                 {imageError ? <Error message='error loading image ,try again' /> : null}
                 {resultError ? <Error message='api error ' /> : null}
                 {typeError ? <Error message='invalid file type' /> : null}

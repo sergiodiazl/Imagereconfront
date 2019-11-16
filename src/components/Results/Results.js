@@ -16,7 +16,7 @@ export default function Results(props) {
     return (
         
            <TextStyle>
-             <h3>It's one of these</h3>
+             <h3>It's one of these?</h3>
           
            <ResultsStyle>
            {predictions.map((prediction)=>

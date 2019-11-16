@@ -1,12 +1,14 @@
 import React from 'react'
-import styled from 'styled-components';
 import {TextStyle} from '../../styles/TextStyle'
 import {BoxStyle}from '../../styles/BoxStyle'
-import { Link } from 'react-router-dom';
+import ReturnButton from '../ReturnButton/ReturnButton'
 export default function NotFound() {
     return (
         <BoxStyle>
-           not found
+           <TextStyle><h2>Are you lost?</h2>
+           <p>The page you are looking for does not exist,the classic 404 error</p>
+           </TextStyle>
+           <ReturnButton/>
         </BoxStyle>
     )
 }
