@@ -7,7 +7,8 @@ const ContainerStyle = styled.div`
   
   justify-content:space-between;
   align-items:center;
-  margin:5% ;
+  margin:0 ;
+  padding:5%;
 `;
 export default function Container(props) {
     return (

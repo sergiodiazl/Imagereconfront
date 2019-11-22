@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 export const LinkStyle=styled(Link)`
+display:block;
 text-decoration:none;
 color: #f15d22 ;
-margin:5%;
+margin:1%;
 transition: 0.5s all ease-out;
 &:focus, &:hover, &:visited, &:link, &:active {
     text-decoration: none;
@@ -32,7 +33,7 @@ margin:5%;
 export const ALinkStyle=styled.a`
 text-decoration:none;
 color: #f15d22 ;
-margin:5%;
+margin:1%;
 transition: 0.5s all ease-out;
 &:focus, &:hover, &:visited, &:link, &:active {
     text-decoration: none;
