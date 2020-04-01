@@ -5,14 +5,13 @@ export const LinkStyle=styled(Link)`
 display:block;
 text-decoration:none;
 color: #f15d22 ;
-margin:1%;
 transition: 0.5s all ease-out;
 &:focus, &:hover, &:visited, &:link, &:active {
     text-decoration: none;
 }
 &:hover {
     
-    border:2px solid #f15d22 ;
+   
     border-radius:5px;
     background-color: #f15d22 ;
     color:#fff;

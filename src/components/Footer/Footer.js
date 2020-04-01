@@ -22,7 +22,7 @@ export default function Footer() {
     <FooterStyle>
      
      
-       <ALinkStyle href="https://sergiodl.herokuapp.com" target='_blank'>
+       <ALinkStyle href="https://sergiodl.com" target='_blank'>
        <TextStyle> Sergio diaz Leguizamon 2019   </TextStyle>
        </ALinkStyle>
 
